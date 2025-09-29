@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esraa Allam - Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #354047;
+            color: #F2F2F2;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Section */
+        header {
+            padding: 80px 0 60px;
+            text-align: center;
+            background: linear-gradient(135deg, #3a4950 0%, #354047 100%);
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #E8A5A3, #949495, #676A6C);
+        }
+        
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #676A6C 0%, #949495 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #F2F2F2;
+            font-size: 4rem;
+            border: 5px solid #E8A5A3;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: #E8A5A3;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            color: #949495;
+            margin-bottom: 20px;
+            max-width: 600px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #949495;
+            padding: 8px 15px;
+            background-color: rgba(103, 106, 108, 0.3);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background-color: rgba(232, 165, 163, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .contact-item i {
+            color: #E8A5A3;
+        }
+        
+        /* Section Styling */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            display: inline-block;
+            padding: 0 20px;
+            background-color: #354047;
+            position: relative;
+            z-index: 1;
+            color: #E8A5A3;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #676A6C, transparent);
+            z-index: 0;
+        }
+        
+        section {
+            padding: 60px 0;
+            margin: 40px 0;
+            background-color: #3a4950;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #E8A5A3, #949495);
+        }
+        
+        section:nth-child(even) {
+            background-color: #3d4a52;
+        }
+        
+        section:nth-child(even)::before {
+            background: linear-gradient(to bottom, #949495, #676A6C);
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin: 15px 0 8px;
+            color: #F2F2F2;
+        }
+        
+        .date {
+            color: #949495;
+            font-style: italic;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #F2F2F2;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            color: #F2F2F2;
+            position: relative;
+        }
+        
+        li::before {
+            content: "▸";
+            color: #E8A5A3;
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .skill {
+            background: linear-gradient(135deg, #676A6C 0%, #949495 100%);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .skill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 35px;
+            padding: 20px;
+            background-color: rgba(53, 64, 71, 0.5);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .experience-item:hover, .education-item:hover {
+            background-color: rgba(53, 64, 71, 0.7);
+            transform: translateX(5px);
+        }
+        
+        .contact-section {
+            text-align: center;
+            padding-bottom: 60px;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #676A6C 0%, #949495 100%);
+            border-radius: 30px;
+            color: #F2F2F2;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-btn:hover {
+            background: linear-gradient(135deg, #E8A5A3 0%, #949495 100%);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .project-card {
+            background: linear-gradient(135deg, #3a4950 0%, #454a50 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .project-img {
+            height: 180px;
+            background: linear-gradient(135deg, #676A6C 0%, #949495 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #F2F2F2;
+            font-size: 3.5rem;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .project-img::after {
+            content: "Click to View Project";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(53, 64, 71, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .project-img:hover::after {
+            opacity: 1;
+        }
+        
+        .project-content {
+            padding: 25px;
+        }
+        
+        .project-title {
+            color: #E8A5A3;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .project-description {
+            color: #F2F2F2;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .project-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+        
+        .tool-tag {
+            background-color: #676A6C;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #E8A5A3;
+            text-decoration: none;
+            margin-top: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .project-link:hover {
+            color: #F2F2F2;
+            transform: translateX(5px);
+        }
+        
+        /* Services Section */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .service-card {
+            background: linear-gradient(135deg, #3a4950 0%, #454a50 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: #E8A5A3;
+            margin-bottom: 20px;
+        }
+        
+        .service-title {
+            color: #E8A5A3;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, #3a4950 0%, #454a50 100%);
+            border-radius: 15px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #F2F2F2;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #676A6C;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #F2F2F2;
+        }
+        
+        .author-info h4 {
+            color: #E8A5A3;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: #949495;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* Certificates Section */
+        .certificates-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .certificate-card {
+            background: linear-gradient(135deg, #3a4950 0%, #454a50 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .certificate-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .certificate-img {
+            height: 180px;
+            background: linear-gradient(135deg, #676A6C 0%, #949495 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #F2F2F2;
+            font-size: 3.5rem;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .certificate-img::after {
+            content: "Click to View Certificate";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(53, 64, 71, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .certificate-img:hover::after {
+            opacity: 1;
+        }
+        
+        .certificate-content {
+            padding: 25px;
+        }
+        
+        .certificate-title {
+            color: #E8A5A3;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .certificate-issuer {
+            color: #949495;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        /* Call to Action Section */
+        .cta-section {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #3a4950 0%, #354047 100%);
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #E8A5A3;
+        }
+        
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #F2F2F2;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 35px;
+            background: linear-gradient(135deg, #E8A5A3 0%, #949495 100%);
+            border-radius: 30px;
+            color: #354047;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-btn:hover {
+            background: linear-gradient(135deg, #949495 0%, #E8A5A3 100%);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-btn.secondary {
+            background: linear-gradient(135deg, #676A6C 0%, #949495 100%);
+            color: #F2F2F2;
+        }
+        
+        .cta-btn.secondary:hover {
+            background: linear-gradient(135deg, #949495 0%, #676A6C 100%);
+        }
+        
+        /* Unique Selling Point */
+        .usp-section {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #3a4950 0%, #454a50 100%);
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #E8A5A3;
+        }
+        
+        .usp-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #E8A5A3;
+        }
+        
+        .usp-text {
+            font-size: 1.4rem;
+            font-style: italic;
+            color: #F2F2F2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 50px 0 30px;
+            color: #949495;
+            font-size: 0.9rem;
+            margin-top: 40px;
+            border-top: 1px solid #676A6C;
+        }
+        
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .footer-contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            color: #949495;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-contact-item:hover {
+            color: #E8A5A3;
+            transform: translateY(-5px);
+        }
+        
+        .footer-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #676A6C 0%, #949495 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #F2F2F2;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-contact-item:hover .footer-icon {
+            background: linear-gradient(135deg, #E8A5A3 0%, #949495 100%);
+        }
+        
+        .footer-contact-text {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        /* GitHub Icon Styling */
+        .github-btn {
+            background: linear-gradient(135deg, #676A6C 0%, #949495 100%);
+        }
+        
+        .github-btn:hover {
+            background: linear-gradient(135deg, #333 0%, #676A6C 100%);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .contact-buttons, .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-btn, .cta-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .projects-container, .services-container, .testimonials-container, .certificates-container {
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 40px 0;
+                margin: 30px 0;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .footer-contact {
+                gap: 20px;
+            }
+            
+            .footer-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-container">
+                <div class="profile-pic">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div>
+                    <h1>Esraa Allam</h1>
+                    <p class="tagline">Data Analyst | Research Coordinator | Problem Solver</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Mansoura, Egypt</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+201063755113</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>esraahassanallam@gmail.com</span>
+                </div>
+            </div>
+        </header>
+        
+        <section id="about">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <p>I'm Esraa Allam, a Data Analyst Freelancer with a strong foundation in SQL, Excel, Python, and Tableau. I specialize in transforming raw data into clear insights—helping businesses streamline operations, track performance, and make smarter, data-driven decisions.</p>
+            
+            <p>My journey began in research and project coordination, where I learned how structured systems can multiply productivity. That experience, combined with hands-on data analysis training through the Digital Egypt Pioneers Initiative (DEPI), shaped my approach: blending technical expertise with organizational precision.</p>
+            
+            <p>We worked on real-world projects that involved cleaning and analyzing large datasets, building dashboards, and generating actionable reports. Through internships and training programs, I developed skills in data visualization, statistical analysis, and problem-solving that allow me to spot patterns and provide meaningful recommendations.</p>
+            
+            <p>Today, I partner with startups and small businesses to help them move beyond spreadsheets—turning complex data into simple roadmaps that save time, reduce complexity, and support growth.</p>
+            
+            <p>📊 If you're looking for someone who can bridge the gap between data and decision-making, let's work together to bring clarity to your business.</p>
+        </section>
+        
+        <div class="usp-section">
+            <h2 class="usp-title">Unique Selling Point</h2>
+            <p class="usp-text">"I bridge the gap between data and decision-making by combining strong analytical skills with professional presentation design. I don't just find the insights — I turn them into clear, visually compelling reports that drive action."</p>
+        </div>
+        
+        <section id="education">
+            <div class="section-title">
+                <h2>Education</h2>
+            </div>
+            <div class="education-item">
+                <h3>BSc. of Agricultural Science, Agricultural Biotechnology</h3>
+                <p>Faculty Of Agriculture, Mansoura University</p>
+            </div>
+        </section>
+        
+        <section id="skills">
+            <div class="section-title">
+                <h2>Skills</h2>
+            </div>
+            <div class="skills-container">
+                <span class="skill">Excel</span>
+                <span class="skill">Python</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Tableau</span>
+                <span class="skill">Power BI</span>
+                <span class="skill">Data Analysis</span>
+                <span class="skill">Statistical Analysis</span>
+                <span class="skill">Linux</span>
+                <span class="skill">Bioinformatics</span>
+                <span class="skill">Data Visualization</span>
+                <span class="skill">Data Cleaning</span>
+                <span class="skill">Dashboard Design</span>
+                <span class="skill">Project Coordination</span>
+                <span class="skill">English (B2)</span>
+            </div>
+        </section>
+        
+        <section id="experience">
+            <div class="section-title">
+                <h2>Work Experience</h2>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Data Analysis Intern</h3>
+                <p class="date">July 2025 - Present</p>
+                <p>Digital Egypt Pioneers Initiative DEPI</p>
+                <ul>
+                    <li>Currently enrolled in a rigorous 6-month, 160-hour Google Data Analyst Specialist program</li>
+                    <li>Actively developing foundational skills in Excel, Python, SQL, Tableau, and statistical analysis to prepare for data cleaning, visualization, and business problem-solving</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Research Intern</h3>
+                <p class="date">Sep 2016 - Jun 2020</p>
+                <p>Advanced Lab 11, Egypt Scholars Ins.</p>
+                <ul>
+                    <li>Participating in a meta-analysis review that aims to find the relationship between the gut Microbiome and different gynecological cancers using bioinformatics tools</li>
+                    <li>Collaborating in collecting data on the ovarian cancer section</li>
+                    <li>Analyzing data with Linux</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Data Science Trainee</h3>
+                <p>Explore Cycle 4, Nilepreneurs</p>
+                <ul>
+                    <li>Earned selection among 50 students for this program from hundreds of applicants</li>
+                    <li>Ranked among the 15 graduates who successfully completed the program from the initial 50 students</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Labs Team Coordinator</h3>
+                <p>Egypt Scholars Inc.</p>
+                <ul>
+                    <li>Optimized team workflow efficiency by analyzing 7 years of archived data</li>
+                    <li>Developed a new data archiving system that doubled productivity</li>
+                    <li>Created and delivered online courses with 1000+ participants</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <div class="section-title">
+                <h2>Projects</h2>
+            </div>
+            <div class="projects-container">
+                <div class="project-card">
+                    <a href="https://example.com/project1" target="_blank">
+                        <div class="project-img">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                    </a>
+                    <div class="project-content">
+                        <h3 class="project-title">Sales Performance Dashboard</h3>
+                        <p class="project-description">Developed an interactive dashboard to track sales performance across multiple regions, identifying key trends and opportunities for growth.</p>
+                        <div class="project-tools">
+                            <span class="tool-tag">Excel</span>
+                            <span class="tool-tag">Power BI</span>
+                            <span class="tool-tag">SQL</span>
+                        </div>
+                        <a href="https://example.com/project1" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Project Details
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <a href="https://example.com/project2" target="_blank">
+                        <div class="project-img">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                    </a>
+                    <div class="project-content">
+                        <h3 class="project-title">Gut Microbiome Research Analysis</h3>
+                        <p class="project-description">Conducted meta-analysis research exploring relationships between gut microbiome and gynecological cancers using bioinformatics tools.</p>
+                        <div class="project-tools">
+                            <span class="tool-tag">Python</span>
+                            <span class="tool-tag">Linux</span>
+                            <span class="tool-tag">Bioinformatics</span>
+                        </div>
+                        <a href="https://example.com/project2" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Research Details
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <a href="https://example.com/project3" target="_blank">
+                        <div class="project-img">
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </a>
+                    <div class="project-content">
+                        <h3 class="project-title">Data Archiving System</h3>
+                        <p class="project-description">Designed and implemented a new data archiving system that doubled team productivity by optimizing workflow based on historical data analysis.</p>
+                        <div class="project-tools">
+                            <span class="tool-tag">Excel</span>
+                            <span class="tool-tag">Data Analysis</span>
+                            <span class="tool-tag">Process Optimization</span>
+                        </div>
+                        <a href="https://example.com/project3" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="certificates">
+            <div class="section-title">
+                <h2>Certificates</h2>
+            </div>
+            <div class="certificates-container">
+                <div class="certificate-card">
+                    <a href="https://example.com/certificate1" target="_blank">
+                        <div class="certificate-img">
+                            <i class="fas fa-award"></i>
+                        </div>
+                    </a>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">Google Data Analytics Professional Certificate</h3>
+                        <p class="certificate-issuer">Google (In Progress)</p>
+                        <p>Comprehensive training in data analysis including spreadsheets, SQL, data visualization, and R programming.</p>
+                        <a href="https://example.com/certificate1" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Certificate
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <a href="https://example.com/certificate2" target="_blank">
+                        <div class="certificate-img">
+                            <i class="fas fa-award"></i>
+                        </div>
+                    </a>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">Database Fundamentals</h3>
+                        <p class="certificate-issuer">Mahara Tech (Sep 2023)</p>
+                        <p>Fundamentals of database design, SQL queries, and database management systems.</p>
+                        <a href="https://example.com/certificate2" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Certificate
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <a href="https://example.com/certificate3" target="_blank">
+                        <div class="certificate-img">
+                            <i class="fas fa-award"></i>
+                        </div>
+                    </a>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">Python Programming Basics</h3>
+                        <p class="certificate-issuer">Mahara Tech (Feb 2021)</p>
+                        <p>Introduction to Python programming, data structures, and basic algorithms.</p>
+                        <a href="https://example.com/certificate3" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Certificate
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="services">
+            <div class="section-title">
+                <h2>My Services</h2>
+            </div>
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="service-title">Data Analysis</h3>
+                    <p>Transform raw data into actionable insights with comprehensive analysis and visualization.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="service-title">Dashboard Development</h3>
+                    <p>Create interactive dashboards that help you monitor key metrics and make informed decisions.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="service-title">Data Cleaning & Preparation</h3>
+                    <p>Clean, organize, and prepare your data for analysis to ensure accurate results.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="testimonials">
+            <div class="section-title">
+                <h2>Testimonials</h2>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Esraa transformed our sales data into clear, actionable insights that helped us increase revenue by 15% in just one quarter. Her attention to detail and ability to explain complex data in simple terms is exceptional."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Ahmed Hassan</h4>
+                            <p>CEO, Retail Solutions Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Working with Esraa on our research project was a game-changer. Her data analysis skills combined with her scientific background brought valuable insights we hadn't considered. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Dr. Sarah Mohamed</h4>
+                            <p>Research Director, Egypt Scholars</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The dashboard Esraa created for our team has saved us hours of manual reporting each week. She understood our needs perfectly and delivered beyond our expectations."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Mona Ali</h4>
+                            <p>Operations Manager, TechStart Egypt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <h2 class="cta-title">Ready to Transform Your Data into Actionable Insights?</h2>
+            <p class="cta-description">Let's work together to unlock the power of your data and drive your business forward with data-driven decisions.</p>
+            <div class="cta-buttons">
+                <a href="https://www.linkedin.com/in/esraa-allam/" target="_blank" class="cta-btn">
+                    <i class="fab fa-linkedin-in"></i>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/esraa-allam" target="_blank" class="cta-btn secondary">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+                <a href="https://wa.me/201063755113" target="_blank" class="cta-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+                <a href="mailto:esraahassanallam@gmail.com" class="cta-btn secondary">
+                    <i class="fas fa-envelope"></i>
+                    Email
+                </a>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="footer-contact">
+                <a href="mailto:esraahassanallam@gmail.com" class="footer-contact-item">
+                    <div class="footer-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <span class="footer-contact-text">Email</span>
+                </a>
+                
+                <a href="https://github.com/esraa-allam" target="_blank" class="footer-contact-item">
+                    <div class="footer-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <span class="footer-contact-text">GitHub</span>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/esraa-allam/" target="_blank" class="footer-contact-item">
+                    <div class="footer-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <span class="footer-contact-text">LinkedIn</span>
+                </a>
+                
+                <a href="https://wa.me/201063755113" target="_blank" class="footer-contact-item">
+                    <div class="footer-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <span class="footer-contact-text">WhatsApp</span>
+                </a>
+            </div>
+            <p>&copy; 2023 Esraa Allam. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
