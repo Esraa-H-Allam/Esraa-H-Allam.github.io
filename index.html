@@ -63,21 +63,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 5px solid #E8A5A3;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-        }
-        
-        .profile-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-        
-        .profile-placeholder {
             color: #F2F2F2;
             font-size: 4rem;
+            border: 5px solid #E8A5A3;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
         h1 {
@@ -740,12 +729,7 @@
         <header>
             <div class="profile-container">
                 <div class="profile-pic">
-                    <!-- REPLACE THE URL BELOW WITH YOUR PROFILE PICTURE LINK -->
-                    <img src="https://example.com/your-profile-picture.jpg" alt="Esraa Allam" class="profile-img">
-                    <!-- If image doesn't load, this placeholder will show -->
-                    <div class="profile-placeholder" style="display: none;">
-                        <i class="fas fa-user"></i>
-                    </div>
+                    <i class="fas fa-user"></i>
                 </div>
                 <div>
                     <h1>Esraa Allam</h1>
@@ -1095,28 +1079,37 @@
         </section>
         
         <footer>
+            <div class="footer-contact">
+                <a href="mailto:esraahassanallam@gmail.com" class="footer-contact-item">
+                    <div class="footer-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <span class="footer-contact-text">Email</span>
+                </a>
+                
+                <a href="https://github.com/esraa-allam" target="_blank" class="footer-contact-item">
+                    <div class="footer-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <span class="footer-contact-text">GitHub</span>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/esraa-allam/" target="_blank" class="footer-contact-item">
+                    <div class="footer-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <span class="footer-contact-text">LinkedIn</span>
+                </a>
+                
+                <a href="https://wa.me/201063755113" target="_blank" class="footer-contact-item">
+                    <div class="footer-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <span class="footer-contact-text">WhatsApp</span>
+                </a>
+            </div>
             <p>&copy; 2023 Esraa Allam. All rights reserved.</p>
         </footer>
     </div>
-
-    <script>
-        // Simple script to handle profile picture loading
-        document.addEventListener('DOMContentLoaded', function() {
-            const profileImg = document.querySelector('.profile-img');
-            const placeholder = document.querySelector('.profile-placeholder');
-            
-            // Check if image loads successfully
-            profileImg.onload = function() {
-                // Image loaded successfully, hide placeholder
-                placeholder.style.display = 'none';
-            };
-            
-            profileImg.onerror = function() {
-                // Image failed to load, show placeholder
-                profileImg.style.display = 'none';
-                placeholder.style.display = 'flex';
-            };
-        });
-    </script>
 </body>
 </html>
