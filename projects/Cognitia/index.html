@@ -197,7 +197,7 @@
         }
 
         .container {
-            max-width: 1800px;
+            max-width: 1600px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
@@ -205,7 +205,7 @@
 
         header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         h1 {
@@ -224,18 +224,32 @@
             letter-spacing: 2px;
         }
 
+        /* Supervisor Card Section */
+        .supervisor-section {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        .supervisor-card {
+            max-width: 280px;
+            width: 100%;
+        }
+
+        /* Students Cards Section */
         .cards-wrapper {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
+            gap: 20px;
             padding: 20px;
         }
 
         .card {
             background: linear-gradient(145deg, #ffffff 0%, #f0f4f8 100%);
-            border-radius: 20px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             position: relative;
             border: 1px solid rgba(0, 217, 255, 0.2);
@@ -247,7 +261,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 5px;
+            height: 4px;
             background: linear-gradient(90deg, #00d9ff, #009d9a);
             transform: scaleX(0);
             transition: transform 0.4s ease;
@@ -258,14 +272,14 @@
         }
 
         .card:hover {
-            transform: translateY(-15px) scale(1.05);
-            box-shadow: 0 25px 50px rgba(0, 217, 255, 0.3), 
-                        0 0 30px rgba(0, 217, 255, 0.2);
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 217, 255, 0.3), 
+                        0 0 25px rgba(0, 217, 255, 0.2);
         }
 
         .card-image {
             width: 100%;
-            height: 280px;
+            height: 160px;
             overflow: hidden;
             position: relative;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -283,24 +297,25 @@
         }
 
         .card-content {
-            padding: 25px 15px;
+            padding: 18px 12px;
             text-align: center;
             background: white;
         }
 
         .card-content h2 {
-            font-size: 1.3rem;
+            font-size: 1.05rem;
             color: #1a1a2e;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             font-weight: 600;
         }
 
         .card-content p {
             color: #009d9a;
-            margin-bottom: 18px;
-            font-size: 0.9rem;
+            margin-bottom: 14px;
+            font-size: 0.78rem;
             font-weight: 500;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
+            line-height: 1.3;
         }
 
         .linkedin-btn {
@@ -309,12 +324,12 @@
             justify-content: center;
             background: linear-gradient(135deg, #0077b5 0%, #005582 100%);
             color: white;
-            padding: 12px 20px;
+            padding: 9px 16px;
             text-decoration: none;
-            border-radius: 30px;
+            border-radius: 25px;
             transition: all 0.3s ease;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.72rem;
             letter-spacing: 0.5px;
             box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);
         }
@@ -327,7 +342,7 @@
 
         .linkedin-btn::before {
             content: "→";
-            margin-right: 6px;
+            margin-right: 5px;
             transition: transform 0.3s ease;
             display: inline-block;
         }
@@ -338,12 +353,18 @@
 
         footer {
             text-align: center;
-            margin-top: 60px;
+            margin-top: 50px;
             color: rgba(255, 255, 255, 0.6);
             font-size: 0.9rem;
         }
 
-        /* Only stack on very small mobile screens */
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .cards-wrapper {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
@@ -355,7 +376,11 @@
             
             .cards-wrapper {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 25px;
+            }
+
+            .supervisor-card {
+                max-width: 100%;
             }
         }
     </style>
@@ -378,11 +403,28 @@
             <p class="subtitle">Digital Egypt Pioneers</p>
         </header>
         
+        <!-- Supervisor Card (First Row - Centered) -->
+        <div class="supervisor-section">
+            <div class="card supervisor-card">
+                <div class="card-image">
+                    <img src="dramr.jpg" alt="Supervisor" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h2>Dr.Amr Ayyad</h2>
+                    <p>Supervisor</p>
+                    <a href="https://www.linkedin.com/in/amr-m-ayyad/" target="_blank" class="linkedin-btn">
+                        LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Students Cards (Second Row) -->
         <div class="cards-wrapper">
             <!-- Card 1 -->
             <div class="card">
                 <div class="card-image">
-                    <img src="sama.png" alt="Data Analyst 1" loading="lazy">
+                    <img src="sama.jpg" alt="Data Analyst 1" loading="lazy">
                 </div>
                 <div class="card-content">
                     <h2>Samaa Mwafi</h2>
@@ -396,7 +438,7 @@
             <!-- Card 2 -->
             <div class="card">
                 <div class="card-image">
-                    <img src="samar.png" alt="Data Analyst 2" loading="lazy">
+                    <img src="samar.jpg" alt="Data Analyst 2" loading="lazy">
                 </div>
                 <div class="card-content">
                     <h2>Samar Mohamed</h2>
@@ -410,7 +452,7 @@
             <!-- Card 3 -->
             <div class="card">
                 <div class="card-image">
-                    <img src="shimaa.png" alt="Data Analyst 3" loading="lazy">
+                    <img src="Shmiaa.jpg" alt="Data Analyst 3" loading="lazy">
                 </div>
                 <div class="card-content">
                     <h2>Shimaa El-Metwally</h2>
@@ -424,7 +466,7 @@
             <!-- Card 4 -->
             <div class="card">
                 <div class="card-image">
-                    <img src="me.png" alt="Data Analyst 4" loading="lazy">
+                    <img src="me.jpg" alt="Data Analyst 4" loading="lazy">
                 </div>
                 <div class="card-content">
                     <h2>Esraa Allam</h2>
