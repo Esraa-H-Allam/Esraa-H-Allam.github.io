@@ -38,7 +38,6 @@
             opacity: 0;
         }
 
-        /* Bar Chart Shape */
         .shape.bar-chart {
             left: 10%;
             bottom: -100px;
@@ -77,7 +76,6 @@
             background: rgba(0, 217, 255, 0.15);
         }
 
-        /* Pie Chart Shape */
         .shape.pie-chart {
             left: 25%;
             bottom: -120px;
@@ -93,7 +91,6 @@
             animation-duration: 28s;
         }
 
-        /* Line Graph Shape */
         .shape.line-graph {
             left: 50%;
             bottom: -80px;
@@ -114,7 +111,6 @@
             transform: scaleY(20);
         }
 
-        /* Data Points */
         .shape.data-point {
             width: 12px;
             height: 12px;
@@ -144,7 +140,6 @@
             animation-duration: 26s;
         }
 
-        /* Analytics Symbol */
         .shape.analytics {
             left: 40%;
             bottom: -100px;
@@ -224,7 +219,6 @@
             letter-spacing: 2px;
         }
 
-        /* Supervisor Card Section */
         .supervisor-section {
             display: flex;
             justify-content: center;
@@ -237,7 +231,6 @@
             width: 100%;
         }
 
-        /* Students Cards Section */
         .cards-wrapper {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -290,9 +283,8 @@
             height: 100%;
             object-fit: cover;
             object-position: top center;
-            transition: all 0.5s ease;
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
+            transition: transform 0.5s ease;
+            display: block;
         }
 
         .card:hover .card-image img {
@@ -361,32 +353,6 @@
             font-size: 0.9rem;
         }
 
-        /* Image Loading State */
-        .card-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            z-index: 1;
-        }
-
-        .card-image img.loaded {
-            animation: fadeIn 0.5s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Responsive */
         @media (max-width: 1200px) {
             .cards-wrapper {
                 grid-template-columns: repeat(2, 1fr);
@@ -414,7 +380,6 @@
     </style>
 </head>
 <body>
-    <!-- Floating Data Shapes -->
     <div class="floating-shapes">
         <div class="shape bar-chart"><div></div></div>
         <div class="shape pie-chart"></div>
@@ -431,11 +396,10 @@
             <p class="subtitle">Digital Egypt Pioneers</p>
         </header>
         
-        <!-- Supervisor Card (First Row - Centered) -->
         <div class="supervisor-section">
             <div class="card supervisor-card">
                 <div class="card-image">
-                    <img src="dramr.jpg" alt="Supervisor" loading="lazy" width="300" height="200">
+                    <img src="dramr.jpg" alt="Dr.Amr Ayyad">
                 </div>
                 <div class="card-content">
                     <h2>Dr.Amr Ayyad</h2>
@@ -447,12 +411,10 @@
             </div>
         </div>
 
-        <!-- Students Cards (Second Row) -->
         <div class="cards-wrapper">
-            <!-- Card 1 -->
             <div class="card">
                 <div class="card-image">
-                    <img src="sama.jpg" alt="Samaa Mwafi" loading="lazy" width="300" height="200">
+                    <img src="sama.jpg" alt="Samaa Mwafi">
                 </div>
                 <div class="card-content">
                     <h2>Samaa Mwafi</h2>
@@ -463,10 +425,9 @@
                 </div>
             </div>
 
-            <!-- Card 2 -->
             <div class="card">
                 <div class="card-image">
-                    <img src="samar.jpg" alt="Samar Mohamed" loading="lazy" width="300" height="200">
+                    <img src="samar.jpg" alt="Samar Mohamed">
                 </div>
                 <div class="card-content">
                     <h2>Samar Mohamed</h2>
@@ -477,10 +438,9 @@
                 </div>
             </div>
 
-            <!-- Card 3 -->
             <div class="card">
                 <div class="card-image">
-                    <img src="Shmiaa.jpg" alt="Shimaa El-Metwally" loading="lazy" width="300" height="200">
+                    <img src="Shmiaa.jpg" alt="Shimaa El-Metwally">
                 </div>
                 <div class="card-content">
                     <h2>Shimaa El-Metwally</h2>
@@ -491,10 +451,9 @@
                 </div>
             </div>
 
-            <!-- Card 4 -->
             <div class="card">
                 <div class="card-image">
-                    <img src="me.jpg" alt="Esraa Allam" loading="lazy" width="300" height="200">
+                    <img src="me.jpg" alt="Esraa Allam">
                 </div>
                 <div class="card-content">
                     <h2>Esraa Allam</h2>
