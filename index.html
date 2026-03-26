@@ -230,7 +230,6 @@
             body {
                 padding-left: 60px; /* matches collapsed navbar width */
             }
-            /* adjust container padding to maintain centered content */
             .container {
                 padding-left: 20px;
                 padding-right: 20px;
@@ -482,6 +481,61 @@
             font-size: 1.2rem;
             font-weight: 600;
             color: var(--primary-color);
+        }
+
+        /* ===== Unique Selling Point (USP) Section ===== */
+        .usp {
+            background: linear-gradient(135deg, #FFF3E0 0%, #F3E5F5 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .usp-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .usp-quote {
+            font-size: 1.6rem;
+            line-height: 1.5;
+            color: var(--text-dark);
+            font-weight: 500;
+            margin-bottom: 20px;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .usp-quote::before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            left: -20px;
+            top: -20px;
+            color: rgba(74, 144, 226, 0.2);
+            font-family: serif;
+        }
+
+        .usp-quote::after {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            right: -20px;
+            bottom: -40px;
+            color: rgba(74, 144, 226, 0.2);
+            font-family: serif;
+        }
+
+        .usp-icon {
+            font-size: 3rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            display: inline-block;
         }
 
         /* ===== Skills Section (only two categories) ===== */
@@ -1142,6 +1196,9 @@
             .projects-arrow.right { right: 5px; }
             .contact-info { grid-template-columns: 1fr; gap: 20px; }
             .contact-item:last-child { grid-column: span 1; max-width: 100%; }
+            .usp-quote::before, .usp-quote::after {
+                display: none;
+            }
         }
 
         @media (max-width: 600px) {
@@ -1154,6 +1211,7 @@
             .hero-image-wrapper { width: 250px; height: 250px; }
             .certificates-grid, .testimonials-grid { grid-template-columns: 1fr; }
             .footer-content { flex-direction: column; text-align: center; }
+            .usp-quote { font-size: 1.3rem; }
         }
     </style>
 </head>
@@ -1165,6 +1223,7 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link"><i class="fas fa-home"></i><span>Home</span></a></li>
                 <li><a href="#about" class="nav-link"><i class="fas fa-user"></i><span>About</span></a></li>
+                <li><a href="#usp" class="nav-link"><i class="fas fa-star"></i><span>My Edge</span></a></li>
                 <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i><span>Skills</span></a></li>
                 <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i><span>Experience</span></a></li>
                 <li><a href="#projects" class="nav-link"><i class="fas fa-folder-open"></i><span>Projects</span></a></li>
@@ -1198,7 +1257,7 @@
                 <div class="hero-image-wrapper">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="https://github.com/Esraa-H-Allam/Esraa-H-Allam.github.io/blob/main/assets/PP.JPG" alt="Esraa Allam">
+                            <img src="https://via.placeholder.com/400x400/4A90E2/FFFFFF?text=Your+Photo" alt="Esraa Allam">
                         </div>
                         <div class="flip-card-back">
                             <img src="https://via.placeholder.com/400x400/50C878/FFFFFF?text=Fun+GIF" alt="Esraa Allam Alternate">
@@ -1212,7 +1271,7 @@
         </div>
     </section>
 
-    <!-- About Section (stats cards removed) -->
+    <!-- About Section -->
     <section id="about" class="about section">
         <div class="container">
             <h2 class="section-title">About Me</h2>
@@ -1238,7 +1297,21 @@
         </div>
     </section>
 
-    <!-- Skills Section (only Programming & Analysis and Data Visualization) -->
+    <!-- Unique Selling Point Section -->
+    <section id="usp" class="usp section">
+        <div class="container">
+            <div class="usp-content">
+                <div class="usp-icon">
+                    <i class="fas fa-chalkboard-user"></i>
+                </div>
+                <div class="usp-quote">
+                    I bridge the gap between data and decision-making by combining strong analytical skills with professional presentation design. I don't just find the insights — I turn them into clear, visually compelling reports that drive action.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
     <section id="skills" class="skills section">
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
@@ -1316,7 +1389,7 @@
         </div>
     </section>
 
-    <!-- Projects Section with Slider (infinite loop) -->
+    <!-- Projects Section -->
     <section id="projects" class="projects section">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
@@ -1426,7 +1499,7 @@
         </div>
     </section>
 
-    <!-- Contact Section (new layout) -->
+    <!-- Contact Section -->
     <section id="contact" class="contact section">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
