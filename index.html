@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Esraa Allam - Data Analyst Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -228,7 +228,7 @@
         /* ===== Add left padding on desktop to prevent navbar overlap ===== */
         @media (min-width: 969px) {
             body {
-                padding-left: 60px; /* matches collapsed navbar width */
+                padding-left: 60px;
             }
             .container {
                 padding-left: 20px;
@@ -1017,7 +1017,7 @@
             color: var(--text-light);
         }
 
-        /* ===== Contact Section (new layout: two side by side, third centered below) ===== */
+        /* ===== Contact Section (only email and LinkedIn, side by side) ===== */
         .contact {
             background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 100%);
         }
@@ -1081,14 +1081,6 @@
 
         .contact-details a:hover {
             color: var(--primary-color);
-        }
-
-        /* Third contact item spans both columns, centered */
-        .contact-item:last-child {
-            grid-column: span 2;
-            justify-self: center;
-            max-width: 500px;
-            width: 100%;
         }
 
         /* ===== Footer ===== */
@@ -1158,16 +1150,25 @@
             box-shadow: var(--shadow-lg);
         }
 
-        /* ===== Responsive Design ===== */
+        /* ===== Enhanced Mobile Responsiveness ===== */
         @media (max-width: 968px) {
             body {
                 padding-left: 0;
             }
             .hero-container {
                 grid-template-columns: 1fr;
+                gap: 40px;
             }
-            .hero-content { text-align: center; }
-            .hero-buttons, .social-links { justify-content: center; }
+            .hero-content {
+                text-align: center;
+                order: 1;
+            }
+            .hero-image {
+                order: 0;
+            }
+            .hero-buttons, .social-links {
+                justify-content: center;
+            }
             .navbar {
                 top: 0;
                 transform: none;
@@ -1181,37 +1182,136 @@
                 align-items: center;
                 padding: 12px 20px;
             }
-            .navbar:hover .nav-container { width: 100%; }
-            .logo { display: block; }
+            .navbar:hover .nav-container {
+                width: 100%;
+            }
+            .logo {
+                display: block;
+            }
             .nav-menu {
                 flex-direction: row;
                 flex-wrap: wrap;
-                gap: 10px;
+                gap: 8px;
                 justify-content: flex-end;
             }
-            .nav-link span { display: inline-block; }
-            .navbar:hover .nav-link span { display: inline-block; }
-            .nav-link { padding: 6px 12px; }
-            .projects-arrow.left { left: 5px; }
-            .projects-arrow.right { right: 5px; }
-            .contact-info { grid-template-columns: 1fr; gap: 20px; }
-            .contact-item:last-child { grid-column: span 1; max-width: 100%; }
+            .nav-link span {
+                display: inline-block;
+                font-size: 0.85rem;
+            }
+            .navbar:hover .nav-link span {
+                display: inline-block;
+            }
+            .nav-link {
+                padding: 6px 10px;
+                gap: 6px;
+            }
+            .nav-link i {
+                font-size: 1rem;
+            }
+            .projects-arrow.left {
+                left: 5px;
+            }
+            .projects-arrow.right {
+                right: 5px;
+            }
+            .contact-info {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
             .usp-quote::before, .usp-quote::after {
                 display: none;
+            }
+            .section {
+                padding: 60px 0;
+            }
+            .hero {
+                padding: 100px 20px 60px;
             }
         }
 
         @media (max-width: 600px) {
-            .hero { padding: 100px 20px 60px; }
-            .section { padding: 60px 0; }
-            .hero-buttons { flex-direction: column; width: 100%; }
-            .hero-buttons .btn { width: 100%; }
-            .about-text-wrapper { flex-direction: column; align-items: flex-start; }
-            .cv-btn-container { margin-left: 0; align-self: flex-start; }
-            .hero-image-wrapper { width: 250px; height: 250px; }
-            .certificates-grid, .testimonials-grid { grid-template-columns: 1fr; }
-            .footer-content { flex-direction: column; text-align: center; }
-            .usp-quote { font-size: 1.3rem; }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .typing-text {
+                font-size: 1.5rem;
+            }
+            .hero-description {
+                font-size: 1rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            .hero-buttons .btn {
+                width: 100%;
+            }
+            .about-text-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .cv-btn-container {
+                margin-left: 0;
+                align-self: flex-start;
+            }
+            .hero-image-wrapper {
+                width: 250px;
+                height: 250px;
+            }
+            .certificates-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .usp-quote {
+                font-size: 1.3rem;
+                padding: 0;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            /* Project cards full width on small screens */
+            .project-card {
+                min-width: calc(100% - 20px);
+                max-width: calc(100% - 20px);
+                margin-right: 20px;
+            }
+            .projects-track {
+                width: 100%;
+            }
+            .projects-arrow {
+                width: 35px;
+                height: 35px;
+            }
+            .timeline::before {
+                left: 15px;
+            }
+            .timeline-item {
+                padding-left: 45px;
+            }
+            .timeline-dot {
+                left: 6px;
+                width: 18px;
+                height: 18px;
+            }
+            .timeline-content {
+                padding: 18px;
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 480px) {
+            .nav-link span {
+                font-size: 0.7rem;
+            }
+            .nav-link {
+                padding: 4px 8px;
+            }
+            .nav-menu {
+                gap: 5px;
+            }
         }
     </style>
 </head>
@@ -1257,10 +1357,10 @@
                 <div class="hero-image-wrapper">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="https://github.com/Esraa-H-Allam/Esraa-H-Allam.github.io/blob/main/assets/PP_A_S.png?raw=true" alt="Esraa Allam">
+                            <img src="https://via.placeholder.com/400x400/4A90E2/FFFFFF?text=Your+Photo" alt="Esraa Allam">
                         </div>
                         <div class="flip-card-back">
-                            <img src="https://github.com/Esraa-H-Allam/Esraa-H-Allam.github.io/blob/main/assets/PP_data.png?raw=true" alt="Esraa Allam Alternate">
+                            <img src="https://via.placeholder.com/400x400/50C878/FFFFFF?text=Fun+GIF" alt="Esraa Allam Alternate">
                         </div>
                     </div>
                 </div>
@@ -1499,7 +1599,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section (WhatsApp removed) -->
     <section id="contact" class="contact section">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
@@ -1509,10 +1609,6 @@
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div class="contact-details"><h3>Email</h3><a href="mailto:esraahassanallam@gmail.com">esraahassanallam@gmail.com</a></div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-                        <div class="contact-details"><h3>WhatsApp</h3><a href="https://wa.me/201063755113" target="_blank">+20 106 375 5113</a></div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
