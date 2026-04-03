@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Esraa Allam - Data Analyst Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Preload hero image for faster LCP -->
+    <link rel="preload" as="image" href="assets/images/esraa-profile.webp">
     <style>
         /* ===== CSS Variables ===== */
         :root {
@@ -1357,10 +1359,16 @@
                 <div class="hero-image-wrapper">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="https://via.placeholder.com/400x400/4A90E2/FFFFFF?text=Your+Photo" alt="Esraa Allam">
+                            <img src="assets/images/esraa-profile.webp"
+                                 alt="Esraa Allam"
+                                 width="350" height="350"
+                                 loading="eager">
                         </div>
                         <div class="flip-card-back">
-                            <img src="https://via.placeholder.com/400x400/50C878/FFFFFF?text=Fun+GIF" alt="Esraa Allam Alternate">
+                            <img src="assets/images/esraa-profile-fun.webp"
+                                 alt="Esraa Allam Alternate"
+                                 width="350" height="350"
+                                 loading="eager">
                         </div>
                     </div>
                 </div>
@@ -1498,7 +1506,13 @@
                 <div class="projects-track" id="projects-track">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="https://via.placeholder.com/400x300/4A90E2/FFFFFF?text=Healthcare+Analysis" alt="Project 1">
+                            <img src="assets/images/project-healthcare-800w.webp"
+                                 srcset="assets/images/project-healthcare-400w.webp 400w,
+                                         assets/images/project-healthcare-800w.webp 800w"
+                                 sizes="(max-width: 600px) calc(100vw - 40px), 360px"
+                                 alt="Healthcare dashboard preview"
+                                 loading="lazy"
+                                 width="400" height="225">
                             <div class="project-overlay">
                                 <a href="https://github.com/YOUR_USERNAME/project1" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
                                 <a href="#" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -1512,7 +1526,13 @@
                     </div>
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="https://via.placeholder.com/400x300/50C878/FFFFFF?text=Sales+Dashboard" alt="Project 2">
+                            <img src="assets/images/project-sales-800w.webp"
+                                 srcset="assets/images/project-sales-400w.webp 400w,
+                                         assets/images/project-sales-800w.webp 800w"
+                                 sizes="(max-width: 600px) calc(100vw - 40px), 360px"
+                                 alt="Sales dashboard preview"
+                                 loading="lazy"
+                                 width="400" height="225">
                             <div class="project-overlay">
                                 <a href="https://github.com/YOUR_USERNAME/project2" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
                                 <a href="#" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -1526,7 +1546,13 @@
                     </div>
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="https://via.placeholder.com/400x300/FF6B6B/FFFFFF?text=Data+Cleaning" alt="Project 3">
+                            <img src="assets/images/project-cleaning-800w.webp"
+                                 srcset="assets/images/project-cleaning-400w.webp 400w,
+                                         assets/images/project-cleaning-800w.webp 800w"
+                                 sizes="(max-width: 600px) calc(100vw - 40px), 360px"
+                                 alt="Data cleaning pipeline preview"
+                                 loading="lazy"
+                                 width="400" height="225">
                             <div class="project-overlay">
                                 <a href="https://github.com/YOUR_USERNAME/project3" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
                                 <a href="#" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -1553,25 +1579,61 @@
             <div class="certificates-grid">
                 <div class="certificate-card">
                     <a href="#" target="_blank">
-                        <div class="certificate-image"><img src="https://via.placeholder.com/350x250/4A90E2/FFFFFF?text=Google+Certificate" alt="Google Data Analytics Certificate"><div class="certificate-overlay"><i class="fas fa-external-link-alt"></i><p>View Certificate</p></div></div>
+                        <div class="certificate-image">
+                            <img src="assets/images/cert-google-800w.webp"
+                                 srcset="assets/images/cert-google-400w.webp 400w,
+                                         assets/images/cert-google-800w.webp 800w"
+                                 sizes="(max-width: 600px) 100vw, 280px"
+                                 alt="Google Data Analytics Certificate"
+                                 loading="lazy"
+                                 width="400" height="300">
+                            <div class="certificate-overlay"><i class="fas fa-external-link-alt"></i><p>View Certificate</p></div>
+                        </div>
                         <div class="certificate-content"><h3>Google Data Analytics Professional</h3><p class="certificate-issuer"><i class="fas fa-building"></i> Google / DEPI</p><p class="certificate-date"><i class="far fa-calendar"></i> 2025</p></div>
                     </a>
                 </div>
                 <div class="certificate-card">
                     <a href="#" target="_blank">
-                        <div class="certificate-image"><img src="https://via.placeholder.com/350x250/50C878/FFFFFF?text=Python+Basics" alt="Python Programming Certificate"><div class="certificate-overlay"><i class="fas fa-external-link-alt"></i><p>View Certificate</p></div></div>
+                        <div class="certificate-image">
+                            <img src="assets/images/cert-python-800w.webp"
+                                 srcset="assets/images/cert-python-400w.webp 400w,
+                                         assets/images/cert-python-800w.webp 800w"
+                                 sizes="(max-width: 600px) 100vw, 280px"
+                                 alt="Python Programming Certificate"
+                                 loading="lazy"
+                                 width="400" height="300">
+                            <div class="certificate-overlay"><i class="fas fa-external-link-alt"></i><p>View Certificate</p></div>
+                        </div>
                         <div class="certificate-content"><h3>Python Programming Basics</h3><p class="certificate-issuer"><i class="fas fa-building"></i> Mahara Tech</p><p class="certificate-date"><i class="far fa-calendar"></i> Feb 2021</p></div>
                     </a>
                 </div>
                 <div class="certificate-card">
                     <a href="#" target="_blank">
-                        <div class="certificate-image"><img src="https://via.placeholder.com/350x250/FF6B6B/FFFFFF?text=Database+SQL" alt="Database Fundamentals Certificate"><div class="certificate-overlay"><i class="fas fa-external-link-alt"></i><p>View Certificate</p></div></div>
+                        <div class="certificate-image">
+                            <img src="assets/images/cert-sql-800w.webp"
+                                 srcset="assets/images/cert-sql-400w.webp 400w,
+                                         assets/images/cert-sql-800w.webp 800w"
+                                 sizes="(max-width: 600px) 100vw, 280px"
+                                 alt="Database Fundamentals Certificate"
+                                 loading="lazy"
+                                 width="400" height="300">
+                            <div class="certificate-overlay"><i class="fas fa-external-link-alt"></i><p>View Certificate</p></div>
+                        </div>
                         <div class="certificate-content"><h3>Database Fundamentals</h3><p class="certificate-issuer"><i class="fas fa-building"></i> Mahara Tech</p><p class="certificate-date"><i class="far fa-calendar"></i> Sep 2023</p></div>
                     </a>
                 </div>
                 <div class="certificate-card">
                     <a href="#" target="_blank">
-                        <div class="certificate-image"><img src="https://via.placeholder.com/350x250/9B59B6/FFFFFF?text=Data+Science" alt="Data Science Certificate"><div class="certificate-overlay"><i class="fas fa-external-link-alt"></i><p>View Certificate</p></div></div>
+                        <div class="certificate-image">
+                            <img src="assets/images/cert-datascience-800w.webp"
+                                 srcset="assets/images/cert-datascience-400w.webp 400w,
+                                         assets/images/cert-datascience-800w.webp 800w"
+                                 sizes="(max-width: 600px) 100vw, 280px"
+                                 alt="Data Science Certificate"
+                                 loading="lazy"
+                                 width="400" height="300">
+                            <div class="certificate-overlay"><i class="fas fa-external-link-alt"></i><p>View Certificate</p></div>
+                        </div>
                         <div class="certificate-content"><h3>Data Science Training</h3><p class="certificate-issuer"><i class="fas fa-building"></i> Nilepreneurs</p><p class="certificate-date"><i class="far fa-calendar"></i> May 2022 - Feb 2023</p></div>
                     </a>
                 </div>
@@ -1599,7 +1661,7 @@
         </div>
     </section>
 
-    <!-- Contact Section (WhatsApp removed) -->
+    <!-- Contact Section -->
     <section id="contact" class="contact section">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
