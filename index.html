@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Esraa Allam - Data Analyst Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Preload hero image for faster LCP -->
-    <link rel="preload" as="image" href="assets/images/esraa-profile.webp">
     <style>
         /* ===== CSS Variables ===== */
         :root {
@@ -25,7 +23,6 @@
             --max-width: 1200px;
         }
 
-        /* ===== Reset & Base Styles ===== */
         * {
             margin: 0;
             padding: 0;
@@ -59,7 +56,6 @@
             list-style: none;
         }
 
-        /* ===== Utility Classes ===== */
         .container {
             max-width: var(--max-width);
             margin: 0 auto;
@@ -96,7 +92,6 @@
             margin-bottom: 50px;
         }
 
-        /* ===== Buttons ===== */
         .btn {
             display: inline-block;
             padding: 12px 30px;
@@ -130,7 +125,7 @@
             color: var(--bg-white);
         }
 
-        /* ===== Navigation (left bar - icons only, text on hover) ===== */
+        /* Navigation - left bar icons only, text on hover */
         .navbar {
             position: fixed;
             top: 50%;
@@ -227,7 +222,6 @@
             width: 40%;
         }
 
-        /* ===== Add left padding on desktop to prevent navbar overlap ===== */
         @media (min-width: 969px) {
             body {
                 padding-left: 60px;
@@ -238,7 +232,7 @@
             }
         }
 
-        /* ===== Hero Section ===== */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -442,7 +436,7 @@
             60% { transform: translateY(-5px); }
         }
 
-        /* ===== About Section ===== */
+        /* About Section */
         .about {
             background: var(--bg-white);
         }
@@ -485,7 +479,7 @@
             color: var(--primary-color);
         }
 
-        /* ===== Unique Selling Point (USP) Section ===== */
+        /* USP Section */
         .usp {
             background: linear-gradient(135deg, #FFF3E0 0%, #F3E5F5 100%);
             position: relative;
@@ -540,7 +534,7 @@
             display: inline-block;
         }
 
-        /* ===== Skills Section (only two categories) ===== */
+        /* Skills Section */
         .skills {
             background: linear-gradient(135deg, #F8F9FA 0%, #E3F2FD 100%);
         }
@@ -607,7 +601,7 @@
             50% { transform: translateY(-4px); }
         }
 
-        /* ===== Experience Section ===== */
+        /* Experience Section */
         .experience {
             background: var(--bg-white);
         }
@@ -716,7 +710,7 @@
             color: var(--text-light);
         }
 
-        /* ===== Projects Section Slider (with infinite loop) ===== */
+        /* Projects Slider */
         .projects {
             background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 50%, #FFF3E0 100%);
         }
@@ -862,7 +856,7 @@
         .projects-arrow.left { left: -10px; }
         .projects-arrow.right { right: -10px; }
 
-        /* ===== Certificates Section ===== */
+        /* Certificates Section */
         .certificates {
             background: var(--bg-white);
         }
@@ -973,53 +967,7 @@
             margin-right: 5px;
         }
 
-        /* ===== Testimonials ===== */
-        .testimonials {
-            background: linear-gradient(135deg, #F3E5F5 0%, #E3F2FD 100%);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .testimonial-card {
-            background: var(--bg-white);
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: var(--shadow-sm);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .testimonial-card::before {
-            content: '“';
-            position: absolute;
-            top: -20px;
-            left: 20px;
-            font-size: 5rem;
-            color: rgba(74, 144, 226, 0.1);
-        }
-
-        .testimonial-text {
-            color: var(--text-light);
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-
-        .testimonial-author {
-            font-weight: 700;
-            color: var(--text-dark);
-        }
-
-        .testimonial-role {
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-
-        /* ===== Contact Section (only email and LinkedIn, side by side) ===== */
+        /* Contact Section */
         .contact {
             background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 100%);
         }
@@ -1085,7 +1033,7 @@
             color: var(--primary-color);
         }
 
-        /* ===== Footer ===== */
+        /* Footer */
         .footer {
             background: linear-gradient(135deg, var(--text-dark), #1a252f);
             color: var(--bg-white);
@@ -1122,7 +1070,6 @@
             transform: translateY(-3px) rotate(360deg);
         }
 
-        /* ===== Back to Top Button ===== */
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -1152,7 +1099,7 @@
             box-shadow: var(--shadow-lg);
         }
 
-        /* ===== Enhanced Mobile Responsiveness ===== */
+        /* Mobile Responsiveness */
         @media (max-width: 968px) {
             body {
                 padding-left: 0;
@@ -1260,7 +1207,7 @@
                 width: 250px;
                 height: 250px;
             }
-            .certificates-grid, .testimonials-grid {
+            .certificates-grid {
                 grid-template-columns: 1fr;
             }
             .footer-content {
@@ -1274,7 +1221,6 @@
             .section-title {
                 font-size: 2rem;
             }
-            /* Project cards full width on small screens */
             .project-card {
                 min-width: calc(100% - 20px);
                 max-width: calc(100% - 20px);
@@ -1303,7 +1249,6 @@
             }
         }
 
-        /* Extra small devices */
         @media (max-width: 480px) {
             .nav-link span {
                 font-size: 0.7rem;
@@ -1330,7 +1275,6 @@
                 <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i><span>Experience</span></a></li>
                 <li><a href="#projects" class="nav-link"><i class="fas fa-folder-open"></i><span>Projects</span></a></li>
                 <li><a href="#certificates" class="nav-link"><i class="fas fa-certificate"></i><span>Certificates</span></a></li>
-                <li><a href="#testimonials" class="nav-link"><i class="fas fa-comments"></i><span>Testimonials</span></a></li>
                 <li><a href="#contact" class="nav-link"><i class="fas fa-paper-plane"></i><span>Contact</span></a></li>
             </ul>
         </div>
@@ -1359,13 +1303,13 @@
                 <div class="hero-image-wrapper">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="https://github.com/Esraa-H-Allam/Esraa-H-Allam.github.io/blob/main/assets/PP_A.webp?raw=true"
+                            <img src="https://raw.githubusercontent.com/Esraa-H-Allam/Esraa-H-Allam.github.io/main/assets/PP_A.webp"
                                  alt="Esraa Allam"
                                  width="350" height="350"
                                  loading="eager">
                         </div>
                         <div class="flip-card-back">
-                            <img src="https://github.com/Esraa-H-Allam/Esraa-H-Allam.github.io/blob/main/assets/pp_flip.gif?raw=true"
+                            <img src="https://raw.githubusercontent.com/Esraa-H-Allam/Esraa-H-Allam.github.io/main/assets/pp_flip.gif"
                                  alt="Esraa Allam Alternate"
                                  width="350" height="350"
                                  loading="eager">
@@ -1395,7 +1339,7 @@
                             </p>
                         </div>
                         <div class="cv-btn-container">
-                            <a href="https://drive.google.com/file/d/1U9mNvoXQXdyBgO4EaFdApdeNDm44PeIk/view?usp=drive_link" class="btn btn-primary" download>
+                            <a href="https://drive.google.com/file/d/1U9mNvoXQXdyBgO4EaFdApdeNDm44PeIk/view?usp=drive_link" class="btn btn-primary" target="_blank">
                                 <i class="fas fa-download"></i> Download CV
                             </a>
                         </div>
@@ -1506,10 +1450,7 @@
                 <div class="projects-track" id="projects-track">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="https://github.com/Esraa-H-Allam/Esraa-H-Allam.github.io/blob/main/assets/Graduation_dashboard.webp?raw=true"
-                                 srcset="assets/images/project-healthcare-400w.webp 400w,
-                                         assets/images/project-healthcare-800w.webp 800w"
-                                 sizes="(max-width: 600px) calc(100vw - 40px), 360px"
+                            <img src="https://raw.githubusercontent.com/Esraa-H-Allam/Esraa-H-Allam.github.io/main/assets/Graduation_dashboard.webp"
                                  alt="Healthcare dashboard preview"
                                  loading="lazy"
                                  width="400" height="225">
@@ -1524,54 +1465,11 @@
                             <div class="project-tags"><span class="tag">Python</span><span class="tag">Power BI</span><span class="tag">ML</span></div>
                         </div>
                     </div>
-                    <!--
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/images/project-sales-800w.webp"
-                                 srcset="assets/images/project-sales-400w.webp 400w,
-                                         assets/images/project-sales-800w.webp 800w"
-                                 sizes="(max-width: 600px) calc(100vw - 40px), 360px"
-                                 alt="Sales dashboard preview"
-                                 loading="lazy"
-                                 width="400" height="225">
-                            <div class="project-overlay">
-                                <a href="https://github.com/YOUR_USERNAME/project2" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
-                                <a href="#" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Sales Dashboard Analysis</h3>
-                            <p>Interactive Tableau dashboard analyzing sales trends, customer behavior, and revenue forecasting.</p>
-                            <div class="project-tags"><span class="tag">Tableau</span><span class="tag">SQL</span><span class="tag">Excel</span></div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/images/project-cleaning-800w.webp"
-                                 srcset="assets/images/project-cleaning-400w.webp 400w,
-                                         assets/images/project-cleaning-800w.webp 800w"
-                                 sizes="(max-width: 600px) calc(100vw - 40px), 360px"
-                                 alt="Data cleaning pipeline preview"
-                                 loading="lazy"
-                                 width="400" height="225">
-                            <div class="project-overlay">
-                                <a href="https://github.com/YOUR_USERNAME/project3" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
-                                <a href="#" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Data Cleaning Project</h3>
-                            <p>End-to-end data cleaning and preprocessing pipeline using Python pandas and SQL for large datasets.</p>
-                            <div class="project-tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">SQL</span></div>
-                        </div>
-                    </div>
-                     -->
                 </div>
                 <div class="projects-arrow left" id="projects-prev"><i class="fas fa-chevron-left"></i></div>
                 <div class="projects-arrow right" id="projects-next"><i class="fas fa-chevron-right"></i></div>
             </div>
         </div>
-                
     </section>
 
     <!-- Certificates Section -->
@@ -1583,10 +1481,7 @@
                 <div class="certificate-card">
                     <a href="#" target="_blank">
                         <div class="certificate-image">
-                            <img src="https://github.com/Esraa-H-Allam/Esraa-H-Allam.github.io/blob/main/assets/DEPI_Data.webp?raw=true"
-                                 srcset="assets/images/cert-google-400w.webp 400w,
-                                         assets/images/cert-google-800w.webp 800w"
-                                 sizes="(max-width: 600px) 100vw, 280px"
+                            <img src="https://raw.githubusercontent.com/Esraa-H-Allam/Esraa-H-Allam.github.io/main/assets/DEPI_Data.webp"
                                  alt="Google Data Analytics Certificate"
                                  loading="lazy"
                                  width="400" height="300">
@@ -1598,10 +1493,7 @@
                 <div class="certificate-card">
                     <a href="#" target="_blank">
                         <div class="certificate-image">
-                            <img src="https://github.com/Esraa-H-Allam/Esraa-H-Allam.github.io/blob/main/assets/python_basics.webp?raw=true"
-                                 srcset="assets/images/cert-python-400w.webp 400w,
-                                         assets/images/cert-python-800w.webp 800w"
-                                 sizes="(max-width: 600px) 100vw, 280px"
+                            <img src="https://raw.githubusercontent.com/Esraa-H-Allam/Esraa-H-Allam.github.io/main/assets/python_basics.webp"
                                  alt="Python Programming Certificate"
                                  loading="lazy"
                                  width="400" height="300">
@@ -1613,10 +1505,7 @@
                 <div class="certificate-card">
                     <a href="#" target="_blank">
                         <div class="certificate-image">
-                            <img src="https://github.com/Esraa-H-Allam/Esraa-H-Allam.github.io/blob/main/assets/Database_fundemental_Certificate_En.webp?raw=true"
-                                 srcset="assets/images/cert-sql-400w.webp 400w,
-                                         assets/images/cert-sql-800w.webp 800w"
-                                 sizes="(max-width: 600px) 100vw, 280px"
+                            <img src="https://raw.githubusercontent.com/Esraa-H-Allam/Esraa-H-Allam.github.io/main/assets/Database_fundemental_Certificate_En.webp"
                                  alt="Database Fundamentals Certificate"
                                  loading="lazy"
                                  width="400" height="300">
@@ -1628,10 +1517,7 @@
                 <div class="certificate-card">
                     <a href="#" target="_blank">
                         <div class="certificate-image">
-                            <img src="https://github.com/Esraa-H-Allam/Esraa-H-Allam.github.io/blob/main/assets/NP_4.webp?raw=true"
-                                 srcset="assets/images/cert-datascience-400w.webp 400w,
-                                         assets/images/cert-datascience-800w.webp 800w"
-                                 sizes="(max-width: 600px) 100vw, 280px"
+                            <img src="https://raw.githubusercontent.com/Esraa-H-Allam/Esraa-H-Allam.github.io/main/assets/NP_4.webp"
                                  alt="Data Science Certificate"
                                  loading="lazy"
                                  width="400" height="300">
@@ -1643,29 +1529,6 @@
             </div>
         </div>
     </section>
-
-    <!--
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-        <div class="container">
-            <h2 class="section-title">Testimonials</h2>
-            <p class="section-subtitle">What mentors, colleagues, and partners say about working with me</p>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">“Esraa consistently delivers structured, insightful analysis and communicates her findings clearly to both technical and non-technical audiences.”</p>
-                    <p class="testimonial-author">Name Surname</p>
-                    <p class="testimonial-role">Role / Organization</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">“Her ability to coordinate teams and organize data workflows has significantly improved our productivity and decision-making.”</p>
-                    <p class="testimonial-author">Name Surname</p>
-                    <p class="testimonial-role">Role / Organization</p>
-                </div>
-            </div>
-        </div>
-    </section>
-     -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -1738,7 +1601,7 @@
         });
         backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-        // Projects Slider (Infinite Loop)
+        // Projects Slider
         const track = document.getElementById('projects-track');
         const prevBtn = document.getElementById('projects-prev');
         const nextBtn = document.getElementById('projects-next');
